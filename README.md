@@ -1,2 +1,2 @@
 # base
-Basic vanilla JavaScript components with basic server.js for Express and gruntfile.js template.
+Ajax with vanilla JavaScript and server.js for Express.
