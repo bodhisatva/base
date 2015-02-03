@@ -1,2 +1,2 @@
 # base
-Basic vanilla JavaScript components
+Ajax with vanilla JavaScript and server.js for Express.

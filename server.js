@@ -5,17 +5,17 @@ var routerInfo = require('./app/router/main'); //annetaan polku reitityskongigur
 
 var app = express(); // käynnistetään express
 
-app.use(bodyParser.json()); //kutsutaan body-parseria jsonille
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: true
-})); //url-parametreille kysymysmerkeillä
+}));
 
-app.use(express.static(path.join(__dirname, '/public'))); //määritellään aloituspolku staattisille tiedostoille (bootstrap)
+app.use(express.static(path.join(__dirname, '/public'))); //määritellään aloituspolku staattisille tiedostoille
 app.use(routerInfo); //annettaan reititystieto expressille
 
 app.set('views', path.join(__dirname, 'app/views')); //määritellään polku views-kansioon
-app.set('view engine', 'ejs'); //muutetaan express:in template-engine ejs:si, embedded javascript
-app.set('port', process.env.PORT || 3000);//määritellään sovelluksen portti
+app.set('view engine', 'ejs'); //määritellään expressin template-engine ejs:si
+app.set('port', process.env.PORT || 3000);
 
 app.listen(app.get('port'), function() {
     console.log('Server started, ready on port: ' + app.get('port'));
